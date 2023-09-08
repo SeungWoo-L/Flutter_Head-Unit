@@ -12,7 +12,7 @@ class HomeButton extends StatelessWidget {
           debugPrint("Home");
         },
         child: Image.asset(
-          'images/icon/copy.png',
+          'images/icon/home.png',
           width: size,
         ));
   }

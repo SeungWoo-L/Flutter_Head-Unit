@@ -1,12 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_head_unit/icons/apple-contact.dart';
-import 'package:flutter_head_unit/icons/apple-map.dart';
-import 'package:flutter_head_unit/icons/apple-music.dart';
-import 'package:flutter_head_unit/icons/apple-phone.dart';
-import 'package:flutter_head_unit/icons/apple-photos.dart';
-import 'package:flutter_head_unit/icons/apple-safari.dart';
-import 'package:flutter_head_unit/icons/apple-settings.dart';
-import 'package:flutter_head_unit/icons/homebutton.dart';
+import 'package:flutter_head_unit/components/app_drawer.dart';
+import 'package:flutter_head_unit/components/navbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,9 +38,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final now = DateTime.now();
-  double size = 70;
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -61,57 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
             image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage('images/wallpaper/iOS-17-6.webp'))),
-        width: 800,
-        height: 500,
+        // width: 800,
+        // height: 500,
         child: Row(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  color:
-                      const Color.fromARGB(255, 112, 145, 172).withOpacity(0.8),
-                  borderRadius: BorderRadius.circular(12)),
-              margin: EdgeInsets.all(10),
-              width: 100,
-              child: Stack(children: [
-                Positioned(
-                    width: 100,
-                    top: 15,
-                    child: Text(
-                      now.hour.toString() + ":" + now.minute.toString(),
-                      textAlign: TextAlign.center,
-                    )),
-                Positioned(
-                    width: 100,
-                    top: 50,
-                    child: Column(
-                      children: [
-                        AppleMap(size: 50),
-                        AppleMusic(size: 50),
-                        AppleSettings(size: 50)
-                      ],
-                    )),
-                Positioned(width: 100, bottom: 0, child: HomeButton(size: 45))
-              ]),
-            ),
-            Container(
-              alignment: Alignment.center,
-              constraints: BoxConstraints(maxWidth: 650),
-              child: Wrap(
-                spacing: 40,
-                runSpacing: 60,
-                runAlignment: WrapAlignment.spaceEvenly,
-                children: [
-                  ApplePhone(size: size),
-                  AppleContact(size: size),
-                  AppleMusic(size: size),
-                  AppleMap(size: size),
-                  AppleSafari(size: size),
-                  ApplePhotos(size: size),
-                  AppleSettings(size: size),
-                ],
-              ),
-            ),
-          ],
+          children: [Navbar(), AppDrawer()],
         ),
       ),
     );
