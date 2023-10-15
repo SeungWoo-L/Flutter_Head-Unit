@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class AppleMap extends StatelessWidget {
   final double size;
 
-  const AppleMap({required this.size});
+  const AppleMap({super.key, required this.size});
 
   @override
   Widget build(BuildContext context) {

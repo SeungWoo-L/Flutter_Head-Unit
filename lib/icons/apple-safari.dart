@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class AppleSafari extends StatelessWidget {
   final double size;
 
-  const AppleSafari({required this.size});
+  const AppleSafari({super.key, required this.size});
 
   @override
   Widget build(BuildContext context) {

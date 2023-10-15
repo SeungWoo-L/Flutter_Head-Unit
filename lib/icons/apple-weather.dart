@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class AppleWeather extends StatelessWidget {
   final double size;
 
-  const AppleWeather({required this.size});
+  const AppleWeather({super.key, required this.size});
 
   @override
   Widget build(BuildContext context) {

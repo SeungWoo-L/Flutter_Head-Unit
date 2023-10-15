@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class ApplePhotos extends StatelessWidget {
   final double size;
 
-  const ApplePhotos({required this.size});
+  const ApplePhotos({super.key, required this.size});
 
   @override
   Widget build(BuildContext context) {

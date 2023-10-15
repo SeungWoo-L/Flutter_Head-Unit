@@ -10,9 +10,9 @@ class GearSelection extends StatefulWidget {
 }
 
 class _GearSelection extends State<GearSelection> {
-  final Selected =
-      TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold);
-  final Not_Selected = TextStyle(
+  final Selected = const TextStyle(
+      color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold);
+  final Not_Selected = const TextStyle(
       color: Color.fromRGBO(200, 200, 200, 0.8),
       fontSize: 30,
       fontWeight: FontWeight.bold);
@@ -35,7 +35,7 @@ class _GearSelection extends State<GearSelection> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: const Color.fromRGBO(30, 30, 30, 1)),
+      decoration: const BoxDecoration(color: Color.fromRGBO(30, 30, 30, 1)),
       width: SCREEN_WIDTH,
       height: SCREEN_HEIGHT * 0.15,
       child: Row(

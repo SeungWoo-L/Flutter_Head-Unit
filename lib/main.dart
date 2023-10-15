@@ -3,8 +3,8 @@ import 'package:flutter_head_unit/components/app_drawer.dart';
 import 'package:flutter_head_unit/components/gear_selection.dart';
 import 'package:flutter_head_unit/components/navbar.dart';
 
-final double SCREEN_WIDTH = 1200;
-final double SCREEN_HEIGHT = 800;
+const double SCREEN_WIDTH = 1200;
+const double SCREEN_HEIGHT = 800;
 void main() {
   runApp(const MyApp());
 }
@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
+    return const CupertinoApp(
       title: 'iOS style',
-      home: const MyHomePage(title: 'Widget'),
+      home: MyHomePage(title: 'Widget'),
     );
   }
 }
@@ -51,24 +51,24 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return CupertinoPageScaffold(
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage('images/wallpaper/iOS-17-6.webp'))),
         width: SCREEN_WIDTH,
         height: SCREEN_HEIGHT,
-        child: Stack(children: [
+        child: const Stack(children: [
           Positioned(
-            child: Navbar(),
             left: 0,
+            child: Navbar(),
           ),
           Positioned(
-            child: AppDrawer(),
             right: 0,
+            child: AppDrawer(),
           ),
           Positioned(
-            child: GearSelection(),
             bottom: 0,
+            child: GearSelection(),
           )
         ]),
       ),

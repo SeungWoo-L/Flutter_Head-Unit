@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class AppleSettings extends StatelessWidget {
   final double size;
 
-  const AppleSettings({required this.size});
+  const AppleSettings({super.key, required this.size});
 
   @override
   Widget build(BuildContext context) {

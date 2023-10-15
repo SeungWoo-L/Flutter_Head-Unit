@@ -10,7 +10,7 @@ class Time extends StatefulWidget {
 
 class _TimeState extends State<Time> {
   late final Timer timer;
-  var currentTime;
+  late String currentTime;
 
   @override
   void initState() {
@@ -40,7 +40,7 @@ class _TimeState extends State<Time> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       child: Text(
         currentTime,
         style: TextStyle(fontSize: MediaQuery.sizeOf(context).width * 0.025),

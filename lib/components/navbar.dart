@@ -23,8 +23,8 @@ class _NavbarState extends State<Navbar> {
       child: Column(
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Time(),
-            Favorites(),
+            const Time(),
+            const Favorites(),
             HomeButton(size: MediaQuery.sizeOf(context).width * 0.07)
           ]),
     );

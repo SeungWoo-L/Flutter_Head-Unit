@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class AppleMusic extends StatelessWidget {
   final double size;
 
-  const AppleMusic({required this.size});
+  const AppleMusic({super.key, required this.size});
 
   @override
   Widget build(BuildContext context) {

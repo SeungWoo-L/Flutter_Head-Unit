@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class AppleContact extends StatelessWidget {
   final double size;
 
-  const AppleContact({required this.size});
+  const AppleContact({super.key, required this.size});
 
   @override
   Widget build(BuildContext context) {

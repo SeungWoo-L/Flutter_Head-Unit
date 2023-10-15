@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class HomeButton extends StatelessWidget {
   final double size;
 
-  const HomeButton({required this.size});
+  const HomeButton({super.key, required this.size});
 
   @override
   Widget build(BuildContext context) {

@@ -17,7 +17,7 @@ class AppDrawer extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       //margin: EdgeInsets.only(left: MediaQuery.sizeOf(context).width * 0.03),
-      margin: EdgeInsets.all(70),
+      margin: const EdgeInsets.all(70),
       constraints:
           BoxConstraints(maxWidth: MediaQuery.sizeOf(context).width * 0.8),
       child: Wrap(
