@@ -4,7 +4,7 @@ import 'package:flutter_head_unit/components/time.dart';
 import 'package:flutter_head_unit/icons/homebutton.dart';
 
 class Navbar extends StatefulWidget {
-  const Navbar();
+  const Navbar({super.key});
 
   @override
   State<Navbar> createState() => _NavbarState();
@@ -19,9 +19,9 @@ class _NavbarState extends State<Navbar> {
           borderRadius: BorderRadius.circular(12)),
       margin: EdgeInsets.all(MediaQuery.sizeOf(context).shortestSide * 0.03),
       width: MediaQuery.sizeOf(context).width * 0.1,
-      height: MediaQuery.sizeOf(context).height,
+      height: MediaQuery.sizeOf(context).height * 0.8,
       child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Time(),
             Favorites(),

@@ -9,14 +9,15 @@ import 'package:flutter_head_unit/icons/apple-settings.dart';
 import 'package:flutter_head_unit/icons/apple-weather.dart';
 
 class AppDrawer extends StatelessWidget {
-  const AppDrawer();
+  const AppDrawer({super.key});
   final iconScale = 0.17;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      margin: EdgeInsets.only(left: MediaQuery.sizeOf(context).width * 0.03),
+      //margin: EdgeInsets.only(left: MediaQuery.sizeOf(context).width * 0.03),
+      margin: EdgeInsets.all(70),
       constraints:
           BoxConstraints(maxWidth: MediaQuery.sizeOf(context).width * 0.8),
       child: Wrap(

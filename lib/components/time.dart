@@ -28,9 +28,7 @@ class _TimeState extends State<Time> {
     var minute =
         now.minute < 10 ? '0${now.minute.toString()}' : now.minute.toString();
     currentTime = '$hour:$minute';
-    setState(() {
-      debugPrint(currentTime);
-    });
+    setState(() {});
   }
 
   @override
@@ -41,10 +39,13 @@ class _TimeState extends State<Time> {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      currentTime,
-      style: TextStyle(fontSize: MediaQuery.sizeOf(context).width * 0.025),
-      textAlign: TextAlign.center,
+    return Container(
+      margin: EdgeInsets.all(10),
+      child: Text(
+        currentTime,
+        style: TextStyle(fontSize: MediaQuery.sizeOf(context).width * 0.025),
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }

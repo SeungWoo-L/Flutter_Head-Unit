@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_head_unit/components/app_drawer.dart';
+import 'package:flutter_head_unit/components/gear_selection.dart';
 import 'package:flutter_head_unit/components/navbar.dart';
 
+final double SCREEN_WIDTH = 1200;
+final double SCREEN_HEIGHT = 800;
 void main() {
   runApp(const MyApp());
 }
@@ -52,11 +55,22 @@ class _MyHomePageState extends State<MyHomePage> {
             image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage('images/wallpaper/iOS-17-6.webp'))),
-        // width: 800,
-        // height: 500,
-        child: Row(
-          children: [Navbar(), AppDrawer()],
-        ),
+        width: SCREEN_WIDTH,
+        height: SCREEN_HEIGHT,
+        child: Stack(children: [
+          Positioned(
+            child: Navbar(),
+            left: 0,
+          ),
+          Positioned(
+            child: AppDrawer(),
+            right: 0,
+          ),
+          Positioned(
+            child: GearSelection(),
+            bottom: 0,
+          )
+        ]),
       ),
     );
   }

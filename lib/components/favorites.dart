@@ -6,14 +6,14 @@ import 'package:flutter_head_unit/icons/apple-settings.dart';
 //For now it's going to be stateless,
 //But later if I have time I will make it modifiable
 class Favorites extends StatelessWidget {
-  const Favorites();
+  const Favorites({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(
-        top: MediaQuery.sizeOf(context).height * 0.1,
-      ),
+      // margin: EdgeInsets.only(
+      //   top: MediaQuery.sizeOf(context).height * 0.1,
+      // ),
       // constraints:
       //     BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height * 0.6),
       height: MediaQuery.sizeOf(context).height * 0.6,
