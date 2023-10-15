@@ -16,15 +16,19 @@ class _GearSelection extends State<GearSelection> {
       color: Color.fromRGBO(200, 200, 200, 0.8),
       fontSize: 30,
       fontWeight: FontWeight.bold);
-  late TextStyle P_State, D_State, N_State, R_State;
+
+  late var selected_gear;
+
+  void onPressed(String gear) {
+    debugPrint(gear);
+    selected_gear = gear;
+    setState(() {});
+  }
 
   @override
   void initState() {
     // TODO: implement initState
-    P_State = Selected;
-    D_State = Not_Selected;
-    N_State = Not_Selected;
-    R_State = Not_Selected;
+    selected_gear = "P";
     super.initState();
   }
 
@@ -41,57 +45,37 @@ class _GearSelection extends State<GearSelection> {
               minSize: 100,
               child: Text(
                 "P",
-                style: P_State,
+                style: selected_gear == "P" ? Selected : Not_Selected,
               ),
               onPressed: () {
-                debugPrint("P");
-                P_State = Selected;
-                D_State = Not_Selected;
-                N_State = Not_Selected;
-                R_State = Not_Selected;
-                setState(() {});
+                onPressed("P");
               }),
           CupertinoButton(
               minSize: 100,
               child: Text(
                 "D",
-                style: D_State,
+                style: selected_gear == "D" ? Selected : Not_Selected,
               ),
               onPressed: () {
-                debugPrint("D");
-                P_State = Not_Selected;
-                D_State = Selected;
-                N_State = Not_Selected;
-                R_State = Not_Selected;
-                setState(() {});
+                onPressed("D");
               }),
           CupertinoButton(
               minSize: 100,
               child: Text(
                 "N",
-                style: N_State,
+                style: selected_gear == "N" ? Selected : Not_Selected,
               ),
               onPressed: () {
-                debugPrint("N");
-                P_State = Not_Selected;
-                D_State = Not_Selected;
-                N_State = Selected;
-                R_State = Not_Selected;
-                setState(() {});
+                onPressed("N");
               }),
           CupertinoButton(
               minSize: 100,
               child: Text(
                 "R",
-                style: R_State,
+                style: selected_gear == "R" ? Selected : Not_Selected,
               ),
               onPressed: () {
-                debugPrint("R");
-                P_State = Not_Selected;
-                D_State = Not_Selected;
-                N_State = Not_Selected;
-                R_State = Selected;
-                setState(() {});
+                onPressed("R");
               }),
         ],
       ),
