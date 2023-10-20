@@ -3,6 +3,9 @@ import 'package:flutter_head_unit/pages/music_player.dart';
 import 'package:flutter_head_unit/pages/settings.dart';
 
 class AppController extends ChangeNotifier {
+  AppController() {
+    debugPrint("Hello world");
+  }
   Widget _currentPage = MusicPlayer();
 
   Widget get currentPage => _currentPage;

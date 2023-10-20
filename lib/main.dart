@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_head_unit/provider/app_controller.dart';
+import 'package:flutter_head_unit/provider/vsomeip.dart';
 import 'package:flutter_head_unit/ui/app_drawer.dart';
 import 'package:flutter_head_unit/ui/clock.dart';
 import 'package:flutter_head_unit/ui/gear_selection.dart';
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
         providers: [
           ChangeNotifierProvider<AppController>(
-              create: (context) => AppController())
+              create: (context) => AppController()),
+          ChangeNotifierProvider<VSOMEIP>(create: (context) => VSOMEIP())
         ],
         child: MaterialApp(
           title: 'Head Unit',
@@ -77,7 +79,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       endDrawer: const AppDrawer(),
       body: Row(children: [
-        const GearSelection(),
+        Consumer<VSOMEIP>(builder: (context, controller, child) {
+          return GearSelection(selected: controller.cur_gear);
+        }),
         Expanded(
             child: Stack(
           children: [
